@@ -31,6 +31,7 @@ This navigation bar must link every section in your page.-->
             <div class="navbar-nav">
                 <a class="nav-link active" href="#Home">Home <span class="sr-only">(current)</span></a>
                 <a class="nav-link" href="#Favourite-Album-List">Favourite Album List</a>
+                <a class="nav-link" href="#Album-Reviews">Album Reviews</a>
                 <a class="nav-link" href="#Worst-Album-List">Worst Album List</a>
                 <a class="nav-link" href=" #Favourite-Musician">Favourite Musician</a>
             </div>
@@ -38,7 +39,7 @@ This navigation bar must link every section in your page.-->
     </nav>
 
 
-    <h1 class="heading">My Favourite Music Albums</h1>
+    <h2 class="heading">My Favourite Music Albums</h2>
 
 
 
@@ -62,8 +63,8 @@ In this section you should have:
 2 albums per line on a small screen-->
 
 
-    <div class="container">
-        <div class="row" id="Home">
+    <div class="container" id="Home">
+        <div class="row" id="Favourite-Album-List">
             <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
                 <div class="card">
                     <img src="fireflies.jpeg" class="card-img-top" alt="Fireflies Album Image">
@@ -196,6 +197,67 @@ In this section you should have:
                         <li class="list-group-item">Duration: 2:58</li>
                     </ul>
                 </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 4)  Create a section for the album reviews.
+
+Pick one of your favourite albums, and create a section with:
+
+A big cover Image
+Title
+Band
+Duration
+Genre
+Tracklist ( in a table, check the bootstrap component for it )
+… And whatever you think it’s interesting about it!-->
+
+    <h2>Album Reviews</h2>
+
+    <div class="container">
+        <div class="card col-12" id="Album-Reviews">
+            <img src="lastForever.jpeg" class="card-img-top" alt="Get To You cover Image">
+            <div class="card-body">
+                <h5 class="card-title">Last Forver</h5>
+                <h5 class="card-band">Artist: Joan Ember</h5>
+                <h5 class="card-band">Genre: Electronic</h5>
+                <h5 class="card-band">Duration: 3:10</h5>
+
+                <table class="table table-borderless table-dark">
+                    <thead>
+                        <tr>
+                            <th scope="col">Tracklist Title</th>
+                            <th scope="col">Artist</th>
+                            <th scope="col">Genre</th>
+                            <th scope="col">Duration</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Feeling Alive</th>
+                            <td>Aaron Fong</td>
+                            <td>Club Mix</td>
+                            <td>3:00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Feeling Alive</th>
+                            <td>Aaron Fong</td>
+                            <td>Club Mix</td>
+                            <td>3:00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Feeling Alive</th>
+                            <td>Aaron Fong</td>
+                            <td>Club Mix</td>
+                            <td>3:00</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+                <p class="card-text">This is the most listened song on Spotify in the year 2018.</p>
             </div>
         </div>
     </div>
