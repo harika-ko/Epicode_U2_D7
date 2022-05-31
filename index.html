@@ -16,6 +16,28 @@
 </head>
 
 <body>
+
+    <!--2)  Implement a navigation bar using the bootstrap component.
+
+This navigation bar must link every section in your page.-->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <!--<a class="navbar-brand" href="#">Home</a>-->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-link active" href="#Home">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="#Favourite-Album-List">Favourite Album List</a>
+                <a class="nav-link" href="#Worst-Album-List">Worst Album List</a>
+                <a class="nav-link" href=" #Favourite-Musician">Favourite Musician</a>
+            </div>
+        </div>
+    </nav>
+
+
     <h1 class="heading">My Favourite Music Albums</h1>
 
 
@@ -31,8 +53,10 @@ the album duration
 NB: make sure to apply the same rules to every album component you display in the page to have them looking consistently similar.-->
 
 
+
+
     <div class="container">
-        <div class="row">
+        <div class="row" id="Home">
             <div class="">
                 <div class="card">
                     <img src="fireflies.jpeg" class="card-img-top" alt="Fireflies Album Image">
