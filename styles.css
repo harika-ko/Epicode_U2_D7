@@ -27,3 +27,34 @@ h2 {
         opacity: 1;
     }
 }
+
+
+.badge-fav-album {
+    position: absolute;
+    color: white;
+    background-color: rgb(53, 52, 52);
+    padding: 0.5rem;
+}
+
+/* Create a new section with an album tracklist inside a Bootstrap table. The row colors of the table must be alternated. There should be a column for the track order number, one for the title,
+ one for the artist name and one for the track duration. (you can also add extra columns)*/
+
+tr:nth-child(even) {
+    animation-direction: alternate;
+    animation: changeColor 3s;
+}
+
+@keyframes changeColor {
+    0% {
+        background-color: rgb(133, 184, 222);
+    }
+
+    50% {
+        background-color: rgb(146, 213, 142);
+    }
+
+    100% {
+        background-color: rgb(133, 184, 222);
+    }
+
+}
