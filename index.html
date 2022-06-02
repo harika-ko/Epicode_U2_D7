@@ -248,55 +248,97 @@ NB: make sure to apply the same rules to every album component you display in th
                 <h5 class="card-band">Genre: Electronic</h5>
                 <h5 class="card-band">Duration: 3:10</h5>
 
-                <table class="table table-borderless table-dark">
+                <table class="table table-borderless table-dark" id="table">
                     <thead>
-                        <tr class="music-table">
+                        <tr>
                             <th scope="col">Tracklist Title</th>
                             <th scope="col">Artist</th>
                             <th scope="col">Genre</th>
                             <th scope="col">Duration</th>
+                            <th scope="col">Button</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
+                        <tr class="music-album">
                             <th scope="row">Feeling Alive</th>
                             <td>Aaron Fong</td>
                             <td>Club Mix</td>
                             <td>3:00</td>
+                            <td><button type="button" class="btn btn-danger">Danger</button></td>
                         </tr>
-                        <tr>
+                        <tr class="music-album">
                             <th scope="row">Feeling Alive</th>
                             <td>Aaron Fong</td>
                             <td>Club Mix</td>
                             <td>3:00</td>
+                            <td><button type="button" class="btn btn-danger">Danger</button></td>
                         </tr>
-                        <tr>
+                        <tr class="music-album">
                             <th scope="row">Feeling Alive</th>
                             <td>Aaron Fong</td>
                             <td>Club Mix</td>
                             <td>3:00</td>
+                            <td><button type="button" class="btn btn-danger">Danger</button></td>
                         </tr>
-                        <tr>
+                        <tr class="music-album">
                             <th scope="row">Feeling Alive</th>
                             <td>Aaron Fong</td>
                             <td>Club Mix</td>
                             <td>3:00</td>
+                            <td><button type="button" class="btn btn-danger">Danger</button></td>
                         </tr>
-                        <tr>
+                        <tr class="music-album">
                             <th scope="row">Feeling Alive</th>
                             <td>Aaron Fong</td>
                             <td>Club Mix</td>
                             <td>3:00</td>
+                            <td><button type="button" class="btn btn-danger">Danger</button></td>
                         </tr>
-                        <tr>
+                        <tr class="music-album">
                             <th scope="row">Feeling Alive</th>
                             <td>Aaron Fong</td>
                             <td>Club Mix</td>
                             <td>3:00</td>
+                            <td><button type="button" class="btn btn-danger">Danger</button></td>
                         </tr>
                     </tbody>
                 </table>
+                <br>
 
+                <button type="button" class="button-add-track" data-toggle="modal" data-target="#exampleModal">Add
+                    Track</button>
+                <br><br>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog mw-100 w-50">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Give the Details here!</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body d-flex justify-content-around">
+                                <label for="track-num">Track Num</label>
+                                <input type="number" id="track-num">
+                                <label for="track-title">Track Title</label>
+                                <input type="text" id="track-title">
+                            </div>
+                            <div class="modal-body d-flex justify-content-around">
+                                <label for="artist-name">Artist Name</label>
+                                <input type="text" id="artist-name">
+                                <label for="track-duration">Track Duration</label>
+                                <input type="text" id="track-duration">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Save changes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
                 <p class="card-text">This is the most listened song on Spotify in the year 2018.</p>
             </div>
@@ -510,6 +552,26 @@ Feel free to experiment in this part of the page.-->
         <!-- Copyright -->
     </footer>
 
+    <!--5) Add a DELETE button (bootstrap btn danger) at the end of each row of the tracklist.
+         Attach the functionality to remove its row when it gets clicked. (Requires DOM manipulation) -->
+
+    <script>
+        function deleteRow() {
+            let tableData = document.getElementById("table")
+            console.log(tableData)
+            let button = document.getElementsByClassName("btn-danger")
+
+            for (let i = 0; i < button.length; i++) {
+                button[i].addEventListener("click", function (e) {
+                    document.getElementById("table").deleteRow(i)
+                })
+            }
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
         crossorigin="anonymous"></script>
