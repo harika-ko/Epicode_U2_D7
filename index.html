@@ -248,7 +248,7 @@ NB: make sure to apply the same rules to every album component you display in th
                 <h5 class="card-band">Genre: Electronic</h5>
                 <h5 class="card-band">Duration: 3:10</h5>
 
-                <table class="table table-borderless table-dark" id="table">
+                <table class="table table-borderless table-dark">
                     <thead>
                         <tr>
                             <th scope="col">Tracklist Title</th>
@@ -258,48 +258,48 @@ NB: make sure to apply the same rules to every album component you display in th
                             <th scope="col">Button</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody id="table">
                         <tr class="music-album">
                             <th scope="row">Feeling Alive</th>
                             <td>Aaron Fong</td>
                             <td>Club Mix</td>
                             <td>3:00</td>
-                            <td><button type="button" class="btn btn-danger">Danger</button></td>
+                            <td><button type="button" class="btn btn-danger" onclick="deleteRow()">Danger</button></td>
                         </tr>
                         <tr class="music-album">
                             <th scope="row">Feeling Alive</th>
                             <td>Aaron Fong</td>
                             <td>Club Mix</td>
                             <td>3:00</td>
-                            <td><button type="button" class="btn btn-danger">Danger</button></td>
+                            <td><button type="button" class="btn btn-danger" onclick="deleteRow()">Danger</button></td>
                         </tr>
                         <tr class="music-album">
                             <th scope="row">Feeling Alive</th>
                             <td>Aaron Fong</td>
                             <td>Club Mix</td>
                             <td>3:00</td>
-                            <td><button type="button" class="btn btn-danger">Danger</button></td>
+                            <td><button type="button" class="btn btn-danger" onclick="deleteRow()">Danger</button></td>
                         </tr>
                         <tr class="music-album">
                             <th scope="row">Feeling Alive</th>
                             <td>Aaron Fong</td>
                             <td>Club Mix</td>
                             <td>3:00</td>
-                            <td><button type="button" class="btn btn-danger">Danger</button></td>
+                            <td><button type="button" class="btn btn-danger" onclick="deleteRow()">Danger</button></td>
                         </tr>
                         <tr class="music-album">
                             <th scope="row">Feeling Alive</th>
                             <td>Aaron Fong</td>
                             <td>Club Mix</td>
                             <td>3:00</td>
-                            <td><button type="button" class="btn btn-danger">Danger</button></td>
+                            <td><button type="button" class="btn btn-danger" onclick="deleteRow()">Danger</button></td>
                         </tr>
                         <tr class="music-album">
                             <th scope="row">Feeling Alive</th>
                             <td>Aaron Fong</td>
                             <td>Club Mix</td>
                             <td>3:00</td>
-                            <td><button type="button" class="btn btn-danger">Danger</button></td>
+                            <td><button type="button" class="btn btn-danger" onclick="deleteRow()">Danger</button></td>
                         </tr>
                     </tbody>
                 </table>
@@ -558,14 +558,7 @@ Feel free to experiment in this part of the page.-->
     <script>
         function deleteRow() {
             let tableData = document.getElementById("table")
-            console.log(tableData)
-            let button = document.getElementsByClassName("btn-danger")
-
-            for (let i = 0; i < button.length; i++) {
-                button[i].addEventListener("click", function (e) {
-                    document.getElementById("table").deleteRow(i)
-                })
-            }
+            tableData.deleteRow(0);
         }
     </script>
 
